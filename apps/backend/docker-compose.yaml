@@ -1,14 +1,14 @@
 services:
   db:
-    image: postgres:18.1-alpine3.23
+    image: postgres:17.6-alpine3.22
     container_name: crochet-patterns-db
     environment:
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_DATABASE}
-      PGDATA: /var/lib/postgresql/18/docker
+      PGDATA: /var/lib/postgresql/17/docker
     volumes:
-      - postgres_data_crochet_patterns:/var/lib/postgresql
+      - postgres_data_crochet_patterns:/var/lib/postgresql/17
     ports:
       - 5432:5432
 
