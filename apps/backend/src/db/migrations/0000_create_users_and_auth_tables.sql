@@ -25,7 +25,7 @@ CREATE TABLE "jwks" (
 --> statement-breakpoint
 CREATE TABLE "users" (
 	"id" text PRIMARY KEY NOT NULL,
-	"public_id" uuid DEFAULT uuidv7() NOT NULL,
+	"public_id" uuid NOT NULL,
 	"name" text NOT NULL,
 	"email" text NOT NULL,
 	"email_verified" boolean DEFAULT false NOT NULL,
