@@ -25,6 +25,7 @@
 			"@validations/*": ["validations/*"],
 			"@db/*": ["db/*"],
 			"@crons/*": ["crons/*"],
+			"@constants/*": ["constants/*"],
 			"@rdc/transactional": ["../../packages/transactional/index.ts"],
 			"@/*": ["*"]
 		},

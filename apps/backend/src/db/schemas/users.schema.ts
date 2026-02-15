@@ -1,5 +1,5 @@
 import { timestamps } from "@db/helpers/columns.helpers.ts";
-import { accounts, sessions } from "@db/schemas/index.ts";
+import { accounts } from "@db/schemas/index.ts";
 import { relations, sql } from "drizzle-orm";
 import { boolean, pgTable, text, uuid } from "drizzle-orm/pg-core";
 
@@ -14,6 +14,5 @@ export const users = pgTable("users", {
 });
 
 export const usersRelations = relations(users, ({ many }) => ({
-	sessions: many(sessions),
 	accounts: many(accounts),
 }));
