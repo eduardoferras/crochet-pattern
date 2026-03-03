@@ -5,6 +5,7 @@ import postgres from "postgres";
 
 const clientPostgres = postgres({
 	prepare: false,
+	ssl: env.DB_CA ? { ca: env.DB_CA, rejectUnauthorized: true } : false,
 	host: env.DB_HOST,
 	port: env.DB_PORT,
 	user: env.DB_USERNAME,
