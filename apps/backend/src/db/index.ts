@@ -1,7 +1,17 @@
 import { env } from "@config/env.config.ts";
 import * as schema from "@db/schemas/index.ts";
-import { drizzle } from "drizzle-orm/node-postgres";
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
 
-const db = drizzle(env.DB_URL, { schema });
+const clientPostgres = postgres({
+	prepare: false,
+	ssl: env.DB_CA ? { ca: env.DB_CA, rejectUnauthorized: true } : false,
+	host: env.DB_HOST,
+	port: env.DB_PORT,
+	user: env.DB_USERNAME,
+	password: env.DB_PASSWORD,
+	database: env.DB_DATABASE,
+});
+const db = drizzle(clientPostgres, { schema });
 
 export default db;

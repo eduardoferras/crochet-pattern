@@ -1,8 +1,7 @@
-import IORedis from "ioredis";
+import { env } from "@config/env.config.ts";
+import { Redis } from "ioredis";
 
-const redisConnection = new IORedis.default({
-	host: process.env.REDIS_HOST || "localhost",
-	port: Number(process.env.REDIS_PORT) || 6379,
+const redisConnection = new Redis(env.REDIS_URL, {
 	maxRetriesPerRequest: null,
 	enableReadyCheck: false,
 });

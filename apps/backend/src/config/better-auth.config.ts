@@ -12,17 +12,19 @@ import { localization } from "better-auth-localization";
 
 export const auth = betterAuth({
 	trustedOrigins: [env.FRONTEND_URL],
-	advanced: {
-		useSecureCookies: env.NODE_ENV === "production",
-		defaultCookieAttributes: {
-			secure: env.NODE_ENV === "production",
-			sameSite: env.NODE_ENV === "production" ? "None" : "Lax",
+	...(env.NODE_ENV === "production" && {
+		advanced: {
+			useSecureCookies: true,
+			defaultCookieAttributes: {
+				secure: true,
+				sameSite: "None",
+			},
+			crossSubDomainCookies: {
+				enabled: true,
+				domain: new URL(env.FRONTEND_URL).hostname,
+			},
 		},
-		crossSubDomainCookies: {
-			enabled: env.NODE_ENV === "production",
-			domain: env.DOMAIN_ROOT,
-		},
-	},
+	}),
 	database: drizzleAdapter(db, {
 		provider: "pg",
 		usePlural: true,
@@ -45,6 +47,7 @@ export const auth = betterAuth({
 			await redisConnection.del(`${SESSION_AUTH_PREFIX}${key}`);
 		},
 	},
+	baseURL: env.BETTER_AUTH_URL,
 	basePath: "/auth",
 	plugins: [
 		jwt({
