@@ -18,6 +18,7 @@ export const auth = betterAuth({
 			defaultCookieAttributes: {
 				secure: true,
 				sameSite: "none",
+				partitioned: true,
 			},
 			crossSubDomainCookies: {
 				enabled: true,
