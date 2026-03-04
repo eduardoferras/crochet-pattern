@@ -12,6 +12,19 @@ import { localization } from "better-auth-localization";
 
 export const auth = betterAuth({
 	trustedOrigins: [env.FRONTEND_URL],
+	...(env.NODE_ENV === "production" && {
+		advanced: {
+			useSecureCookies: true,
+			defaultCookieAttributes: {
+				secure: true,
+				sameSite: "none",
+			},
+			crossSubDomainCookies: {
+				enabled: true,
+				domain: new URL(env.FRONTEND_URL).hostname,
+			},
+		},
+	}),
 	database: drizzleAdapter(db, {
 		provider: "pg",
 		usePlural: true,
