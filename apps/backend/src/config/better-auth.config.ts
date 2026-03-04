@@ -20,10 +20,6 @@ export const auth = betterAuth({
 				sameSite: "none",
 				partitioned: true,
 			},
-			crossSubDomainCookies: {
-				enabled: true,
-				domain: new URL(env.FRONTEND_URL).hostname,
-			},
 		},
 	}),
 	database: drizzleAdapter(db, {
