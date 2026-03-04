@@ -10,19 +10,8 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { jwt, openAPI } from "better-auth/plugins";
 import { localization } from "better-auth-localization";
 
-const isSecure =
-	env.NODE_ENV === "production" || env.BETTER_AUTH_URL.startsWith("https://");
-
 export const auth = betterAuth({
 	trustedOrigins: [env.FRONTEND_URL],
-	advanced: {
-		useSecureCookies: isSecure,
-		defaultCookieAttributes: {
-			secure: isSecure,
-			sameSite: isSecure ? "none" : "lax",
-			path: "/",
-		},
-	},
 	database: drizzleAdapter(db, {
 		provider: "pg",
 		usePlural: true,
