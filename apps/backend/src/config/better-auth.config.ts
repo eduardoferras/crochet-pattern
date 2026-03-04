@@ -22,12 +22,6 @@ export const auth = betterAuth({
 			sameSite: isSecure ? "none" : "lax",
 			path: "/",
 		},
-		crossSubDomainCookies: {
-			enabled:
-				env.NODE_ENV === "production" &&
-				!env.FRONTEND_URL.includes("localhost"),
-			domain: new URL(env.FRONTEND_URL).hostname,
-		},
 	},
 	database: drizzleAdapter(db, {
 		provider: "pg",
