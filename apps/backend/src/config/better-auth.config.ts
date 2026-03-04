@@ -1,6 +1,6 @@
+import { redisStorage } from "@better-auth/redis-storage";
 import { env } from "@config/env.config.ts";
 import redisConnection from "@config/redis.ts";
-import { SESSION_AUTH_PREFIX } from "@constants/auth.constant.ts";
 import db from "@db/index.ts";
 import { PasswordResetEmail } from "@rdc/transactional";
 import { render } from "@react-email/render";
@@ -10,43 +10,32 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { jwt, openAPI } from "better-auth/plugins";
 import { localization } from "better-auth-localization";
 
+const isSecure =
+	env.NODE_ENV === "production" || env.BETTER_AUTH_URL.startsWith("https://");
+
 export const auth = betterAuth({
 	trustedOrigins: [env.FRONTEND_URL],
-	...(env.NODE_ENV === "production" && {
-		advanced: {
-			useSecureCookies: true,
-			defaultCookieAttributes: {
-				secure: true,
-				sameSite: "None",
-			},
-			crossSubDomainCookies: {
-				enabled: true,
-				domain: new URL(env.FRONTEND_URL).hostname,
-			},
+	advanced: {
+		useSecureCookies: isSecure,
+		defaultCookieAttributes: {
+			secure: isSecure,
+			sameSite: isSecure ? "none" : "lax",
 		},
-	}),
+		crossSubDomainCookies: {
+			enabled:
+				env.NODE_ENV === "production" &&
+				!env.FRONTEND_URL.includes("localhost"),
+			domain: new URL(env.FRONTEND_URL).hostname,
+		},
+	},
 	database: drizzleAdapter(db, {
 		provider: "pg",
 		usePlural: true,
 	}),
-	secondaryStorage: {
-		get: async (key) => {
-			return await redisConnection.get(`${SESSION_AUTH_PREFIX}${key}`);
-		},
-		set: async (key, value, ttl) => {
-			if (ttl)
-				await redisConnection.set(
-					`${SESSION_AUTH_PREFIX}${key}`,
-					value,
-					"EX",
-					ttl,
-				);
-			else await redisConnection.set(`${SESSION_AUTH_PREFIX}${key}`, value);
-		},
-		delete: async (key) => {
-			await redisConnection.del(`${SESSION_AUTH_PREFIX}${key}`);
-		},
-	},
+	secondaryStorage: redisStorage({
+		client: redisConnection,
+		keyPrefix: "auth:session:",
+	}),
 	baseURL: env.BETTER_AUTH_URL,
 	basePath: "/auth",
 	plugins: [
