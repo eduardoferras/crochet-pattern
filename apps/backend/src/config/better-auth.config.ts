@@ -1,6 +1,6 @@
+import { redisStorage } from "@better-auth/redis-storage";
 import { env } from "@config/env.config.ts";
 import redisConnection from "@config/redis.ts";
-import { SESSION_AUTH_PREFIX } from "@constants/auth.constant.ts";
 import db from "@db/index.ts";
 import { PasswordResetEmail } from "@rdc/transactional";
 import { render } from "@react-email/render";
@@ -32,24 +32,10 @@ export const auth = betterAuth({
 		provider: "pg",
 		usePlural: true,
 	}),
-	secondaryStorage: {
-		get: async (key) => {
-			return await redisConnection.get(`${SESSION_AUTH_PREFIX}${key}`);
-		},
-		set: async (key, value, ttl) => {
-			if (ttl)
-				await redisConnection.set(
-					`${SESSION_AUTH_PREFIX}${key}`,
-					value,
-					"EX",
-					ttl,
-				);
-			else await redisConnection.set(`${SESSION_AUTH_PREFIX}${key}`, value);
-		},
-		delete: async (key) => {
-			await redisConnection.del(`${SESSION_AUTH_PREFIX}${key}`);
-		},
-	},
+	secondaryStorage: redisStorage({
+		client: redisConnection,
+		keyPrefix: "auth:session:",
+	}),
 	baseURL: env.BETTER_AUTH_URL,
 	basePath: "/auth",
 	plugins: [
