@@ -18,8 +18,11 @@ export const auth = betterAuth({
 			defaultCookieAttributes: {
 				secure: true,
 				sameSite: "None",
-				domain: ".receitasdecroche.com.br",
 				path: "/",
+			},
+			crossSubDomainCookies: {
+				enabled: true,
+				domain: "receitasdecroche.com.br",
 			},
 		},
 	}),
