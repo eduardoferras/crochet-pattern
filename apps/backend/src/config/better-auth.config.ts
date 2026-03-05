@@ -19,10 +19,6 @@ export const auth = betterAuth({
 				secure: true,
 				sameSite: "None",
 			},
-			crossSubDomainCookies: {
-				enabled: true,
-				domain: new URL(env.FRONTEND_URL).hostname,
-			},
 		},
 	}),
 	database: drizzleAdapter(db, {
