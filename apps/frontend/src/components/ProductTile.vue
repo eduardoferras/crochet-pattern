@@ -2,8 +2,12 @@
 	<section class="product-tile">
 		<AppContainer>
 			<h2 class="product-tile__title">Últimos Lançamentos</h2>
-			<div v-if="pending" class="product-tile__title">Carregando produtos...</div>
-			<ul class="product-list">
+			<div v-if="error" class="product-error">
+				<Icon name="mdi:alert-circle-outline" size="24" />
+				<p>Ops! Não conseguimos carregar os produtos no momento.</p>
+			</div>
+			<div v-else-if="pending" class="product-tile__title">Carregando produtos...</div>
+			<ul v-else class="product-list">
 				<li
 					v-for="product in products"
 					:key="product.id"
@@ -46,7 +50,11 @@ const config = useRuntimeConfig()
 const whatsAppSales = config.public.whatsAppSales
 const gtm = useGtm()
 
-const { data: products, pending } = await useFetch(`${config.public.apiUrl}/products`, {
+const {
+	data: products,
+	pending,
+	error
+} = await useFetch(`${config.public.apiUrl}/products`, {
 	key: 'products',
 	lazy: true,
 	transform: (res: { data: Product[] }) => res.data
@@ -144,6 +152,18 @@ function handleWhatsAppClick(product: Product) {
 		font: 600 1.2rem / 1.2 $font-heading;
 		border-radius: 0.4rem;
 		width: fit-content;
+	}
+
+	&-error {
+		grid-column: 1 / -1;
+		text-align: center;
+		padding: 2rem;
+		border: 1px dashed rgba(0, 0, 0, 0.06);
+		border-radius: 0.8rem;
+		background-color: #fff8f2;
+		color: #c53030;
+		font-weight: 600;
+		font-size: 1.2rem;
 	}
 }
 </style>
