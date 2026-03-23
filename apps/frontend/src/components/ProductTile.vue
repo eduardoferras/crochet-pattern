@@ -7,6 +7,9 @@
 				<p>Ops! Não conseguimos carregar os produtos no momento.</p>
 			</div>
 			<div v-else-if="pending" class="product-tile__title">Carregando produtos...</div>
+			<div v-else-if="!pending && products && products.length === 0" class="product-empty">
+				Nenhum produto encontrado.
+			</div>
 			<ul v-else class="product-list">
 				<li
 					v-for="product in products"
@@ -154,16 +157,24 @@ function handleWhatsAppClick(product: Product) {
 		width: fit-content;
 	}
 
-	&-error {
+	&-error,
+	&-empty {
 		grid-column: 1 / -1;
 		text-align: center;
 		padding: 2rem;
 		border: 1px dashed rgba(0, 0, 0, 0.06);
 		border-radius: 0.8rem;
 		background-color: #fff8f2;
-		color: #c53030;
 		font-weight: 600;
 		font-size: 1.2rem;
+	}
+
+	&-error {
+		color: #c53030;
+	}
+
+	&-empty {
+		color: #6b7280;
 	}
 }
 </style>
