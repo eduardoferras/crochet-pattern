@@ -16,4 +16,5 @@ export default defineConfig({
 	migrations: {
 		schema: "public",
 	},
+	casing: "snake_case",
 });
