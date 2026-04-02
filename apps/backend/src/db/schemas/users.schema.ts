@@ -5,15 +5,15 @@ import { boolean, pgTable, text, uuid } from "drizzle-orm/pg-core";
 import { v7 as uuidv7 } from "uuid";
 
 export const users = pgTable("users", {
-	id: text("id").primaryKey(),
-	publicId: uuid("public_id")
+	id: text().primaryKey(),
+	publicId: uuid()
 		.$defaultFn(() => uuidv7())
 		.notNull()
 		.unique(),
-	name: text("name").notNull(),
-	email: text("email").notNull().unique(),
-	emailVerified: boolean("email_verified").default(false).notNull(),
-	image: text("image"),
+	name: text().notNull(),
+	email: text().notNull().unique(),
+	emailVerified: boolean().default(false).notNull(),
+	image: text(),
 	...timestamps,
 });
 

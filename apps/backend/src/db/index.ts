@@ -12,6 +12,7 @@ const clientPostgres = postgres({
 	password: env.DB_PASSWORD,
 	database: env.DB_DATABASE,
 });
-const db = drizzle(clientPostgres, { schema });
+
+const db = drizzle(clientPostgres, { schema, casing: "snake_case" });
 
 export default db;
