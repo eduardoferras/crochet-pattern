@@ -15,6 +15,13 @@
       "when": 1775149991281,
       "tag": "0001_enable_snake_case_casing",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1775352345453,
+      "tag": "0002_convert_ids_to_uuid",
+      "breakpoints": true
     }
   ]
 }
