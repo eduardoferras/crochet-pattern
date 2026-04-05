@@ -1,4 +1,5 @@
-import { timestamp } from "drizzle-orm/pg-core";
+import { timestamp, uuid } from "drizzle-orm/pg-core";
+import { v7 as uuidv7 } from "uuid";
 
 export const timestamps = {
 	createdAt: timestamp("created_at", { withTimezone: true })
@@ -6,7 +7,14 @@ export const timestamps = {
 		.notNull(),
 	updatedAt: timestamp("updated_at", { withTimezone: true })
 		.defaultNow()
-		.$onUpdate(() => /* @__PURE__ */ new Date())
+		.$onUpdate(() => new Date())
 		.notNull(),
 	deletedAt: timestamp("deleted_at", { withTimezone: true }),
 };
+
+export const idType = () => uuid().notNull();
+
+export const idColumn = () =>
+	idType()
+		.$defaultFn(() => uuidv7())
+		.notNull();
