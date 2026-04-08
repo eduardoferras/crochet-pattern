@@ -5,6 +5,7 @@
 		"paths": {
 			"@components/*": ["components/*"],
 			"@composables/*": ["composables/*"],
+			"@constants/*": ["constants/*"],
 			"@validations/*": ["validations/*"],
 			"@interfaces/*": ["interfaces/*"],
 			"@services/*": ["services/*"],
