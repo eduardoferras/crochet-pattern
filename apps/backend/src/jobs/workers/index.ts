@@ -1,4 +1,3 @@
-import "@workers/email.worker.ts";
 import "@workers/feedback.worker.ts";
 
 import { AuthWorker } from "@workers/auth.worker.ts";
@@ -8,7 +7,10 @@ export class WorkerRegistry {
 	private instances: BaseWorker[] = [];
 
 	private readonly workers = [
-		AuthWorker /* EmailWorker, FeedbackWorker, etc. */,
+		/*
+		TODO: FeedbackWorker, etc.
+		*/
+		AuthWorker,
 	];
 
 	constructor() {
