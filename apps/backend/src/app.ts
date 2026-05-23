@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { AppRoutes } from "@routes/index.ts";
 import cors from "cors";
 import express, { type Application } from "express";
-import "@/workers/index.ts";
+import "@workers/index.ts";
 import { corsOptions } from "@config/cors.config.ts";
 import { initCrons } from "@crons/index.ts";
 
