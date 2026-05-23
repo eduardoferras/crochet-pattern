@@ -1,5 +1,5 @@
 import { databaseConfig } from "@config/database.config.ts";
-import * as schema from "@db/schemas/index.ts";
+import * as schema from "@databases/drizzle/schemas/index.ts";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 

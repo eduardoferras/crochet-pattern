@@ -12,9 +12,9 @@ export const timestamps = {
 	deletedAt: timestamp("deleted_at", { withTimezone: true }),
 };
 
-export const idType = () => uuid().notNull();
+export const idType = (name?: string) => uuid(name || "");
 
-export const idColumn = () =>
-	idType()
-		.$defaultFn(() => uuidv7())
-		.notNull();
+export const idColumn = (name?: string) =>
+	idType(name || "")
+		.primaryKey()
+		.$default(() => uuidv7());

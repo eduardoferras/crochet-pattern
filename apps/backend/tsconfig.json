@@ -19,10 +19,10 @@
 			"@config/*": ["config/*"],
 			"@services/*": ["services/*"],
 			"@validations/*": ["validations/*"],
-			"@db/*": ["db/*"],
 			"@crons/*": ["crons/*"],
 			"@constants/*": ["constants/*"],
 			"@providers/*": ["infra/providers/*"],
+			"@databases/*": ["infra/databases/*"],
 			"@infra/*": ["infra/*"],
 			"@rdc/transactional": ["../../packages/transactional/index.ts"],
 			"@/*": ["*"]

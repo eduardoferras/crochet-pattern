@@ -2,7 +2,7 @@ import { redisStorage } from "@better-auth/redis-storage";
 import { env } from "@config/env.config.ts";
 import redisConnection from "@config/redis.ts";
 import { QUEUES } from "@constants/queue.constant.ts";
-import db from "@db/index.ts";
+import db from "@databases/index.ts";
 import { authQueue } from "@queues/auth.queue.ts";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
@@ -11,8 +11,8 @@ import { localization } from "better-auth-localization";
 
 export const auth = betterAuth({
 	trustedOrigins: [env.FRONTEND_URL],
-	...(env.NODE_ENV === "production" && {
-		advanced: {
+	advanced: {
+		...(env.NODE_ENV === "production" && {
 			useSecureCookies: true,
 			defaultCookieAttributes: {
 				secure: true,
@@ -23,8 +23,11 @@ export const auth = betterAuth({
 				enabled: true,
 				domain: "receitasdecroche.com.br",
 			},
+		}),
+		database: {
+			generateId: false,
 		},
-	}),
+	},
 	database: drizzleAdapter(db, {
 		provider: "pg",
 		usePlural: true,

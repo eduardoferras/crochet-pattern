@@ -1,13 +1,19 @@
-import { idColumn, idType, timestamps } from "@db/helpers/columns.helpers.ts";
-import { users } from "@db/schemas/index.ts";
+import {
+	idColumn,
+	idType,
+	timestamps,
+} from "@databases/drizzle/helpers/columns.helpers.ts";
+import { users } from "@databases/drizzle/schemas/index.ts";
 import { relations } from "drizzle-orm";
 import { index, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 export const accounts = pgTable(
 	"accounts",
 	{
-		id: idColumn().primaryKey(),
-		userId: idType().references(() => users.id, { onDelete: "cascade" }),
+		id: idColumn(),
+		userId: idType()
+			.notNull()
+			.references(() => users.id, { onDelete: "cascade" }),
 		accountId: text().notNull(),
 		providerId: text().notNull(),
 		accessToken: text(),

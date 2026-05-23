@@ -1,4 +1,4 @@
-import db from "@db/index.ts";
+import db from "@databases/index.ts";
 import { sql } from "drizzle-orm";
 import cron from "node-cron";
 
