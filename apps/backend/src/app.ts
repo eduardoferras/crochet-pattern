@@ -3,29 +3,48 @@ import { fileURLToPath } from "node:url";
 import routes from "@routes/index.ts";
 import cors from "cors";
 import express, { type Application } from "express";
-import "@/workers";
-import { env } from "@config/env.config.ts";
+import "@/workers/index.ts";
+import { corsOptions } from "@config/cors.config.ts";
 import { initCrons } from "@crons/index.ts";
 import authRouter from "@routes/auth.route.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const corsOptions = {
-	origin: env.FRONTEND_URL,
-	methods: ["GET", "POST", "PUT", "DELETE"],
-	credentials: true,
-};
+export default class App {
+	public readonly express: Application;
 
-const app: Application = express();
+	constructor() {
+		this.express = express();
+		this.express.use(cors(corsOptions));
 
-app.use(cors(corsOptions));
-app.use("/auth", authRouter);
-app.use(express.json({ limit: "5mb" }));
-app.use(express.urlencoded({ limit: "5mb", extended: true }));
-app.use(express.static(path.join(__dirname, "../public")));
-app.use(routes);
+		this.initializeAuth();
+		this.initializeMiddlewares();
+		this.initializeRoutes();
+		this.initializeStaticFiles();
+		initCrons();
+	}
 
-initCrons();
+	private initializeAuth(): void {
+		this.express.use("/auth", authRouter);
+	}
 
-export default app;
+	private initializeMiddlewares(): void {
+		this.express.use(express.json({ limit: "5mb" }));
+		this.express.use(express.urlencoded({ limit: "5mb", extended: true }));
+	}
+
+	private initializeRoutes(): void {
+		this.express.use(routes);
+	}
+
+	private initializeStaticFiles(): void {
+		this.express.use(express.static(path.join(__dirname, "../public")));
+	}
+
+	public listen(port: number): void {
+		this.express.listen(port, "0.0.0.0", () => {
+			console.log(`Server running on port ${port}`);
+		});
+	}
+}
