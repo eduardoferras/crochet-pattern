@@ -11,14 +11,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default class App {
-	public readonly express: Application;
+	public readonly app: Application;
 	private readonly routes: AppRoutes;
 
 	constructor() {
-		this.express = express();
-		this.express.use(cors(corsOptions));
+		this.app = express();
+		this.app.use(cors(corsOptions));
 
-		this.routes = new AppRoutes(this.express);
+		this.routes = new AppRoutes(this.app);
 
 		this.initializeAuthRoutes();
 		this.initializeMiddlewares();
@@ -36,16 +36,16 @@ export default class App {
 	}
 
 	private initializeMiddlewares(): void {
-		this.express.use(express.json({ limit: "5mb" }));
-		this.express.use(express.urlencoded({ limit: "5mb", extended: true }));
+		this.app.use(express.json({ limit: "5mb" }));
+		this.app.use(express.urlencoded({ limit: "5mb", extended: true }));
 	}
 
 	private initializeStaticFiles(): void {
-		this.express.use(express.static(path.join(__dirname, "../public")));
+		this.app.use(express.static(path.join(__dirname, "../public")));
 	}
 
 	public listen(port: number): void {
-		this.express.listen(port, "0.0.0.0", () => {
+		this.app.listen(port, "0.0.0.0", () => {
 			console.log(`Server running on port ${port}`);
 		});
 	}
