@@ -1,4 +1,5 @@
-import { type FeedbackQueue, feedbackQueue } from "@queues/feedback.queue.ts";
+import { QUEUES } from "@constants/queue.constant.ts";
+import { FeedbackQueue } from "@queues/feedback.queue.ts";
 import type { FeedbackSchema } from "@validations/feedback.validation.ts";
 
 export class FeedbackService {
@@ -6,7 +7,10 @@ export class FeedbackService {
 
 	async create(data: FeedbackSchema) {
 		try {
-			await this.feedbackQueue.dispatch(data);
+			return await this.feedbackQueue.addJob(
+				QUEUES.FEEDBACK.JOBS.SEND_EMAIL,
+				data,
+			);
 		} catch (error) {
 			console.error("Error creating feedback:", error);
 			throw error;
@@ -14,4 +18,4 @@ export class FeedbackService {
 	}
 }
 
-export const feedbackService = new FeedbackService(feedbackQueue);
+export const feedbackService = new FeedbackService(new FeedbackQueue());

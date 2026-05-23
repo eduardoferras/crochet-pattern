@@ -1,17 +1,11 @@
-import "@workers/feedback.worker.ts";
-
 import { AuthWorker } from "@workers/auth.worker.ts";
 import type { BaseWorker } from "@workers/base.worker.ts";
+import { FeedbackWorker } from "@workers/feedback.worker.ts";
 
 export class WorkerRegistry {
 	private instances: BaseWorker[] = [];
 
-	private readonly workers = [
-		/*
-		TODO: FeedbackWorker, etc.
-		*/
-		AuthWorker,
-	];
+	private readonly workers = [AuthWorker, FeedbackWorker];
 
 	constructor() {
 		this.initializeWorkers();

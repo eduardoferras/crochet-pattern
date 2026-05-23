@@ -1,5 +1,10 @@
 export const QUEUES = {
-	FEEDBACK: "feedback-queue",
+	FEEDBACK: {
+		NAME: "feedback-queue",
+		JOBS: {
+			SEND_EMAIL: "send-feedback-email",
+		},
+	},
 	AUTH: {
 		NAME: "auth-queue",
 		JOBS: {
