@@ -8,7 +8,7 @@ const feedbackRouter = Router();
 feedbackRouter.post(
 	"/",
 	validateBody(feedbackZodSchema),
-	feedbackController.sendFeedback,
+	feedbackController.create,
 );
 
 export default feedbackRouter;
