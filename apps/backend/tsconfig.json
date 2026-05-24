@@ -22,6 +22,8 @@
 			"@db/*": ["db/*"],
 			"@crons/*": ["crons/*"],
 			"@constants/*": ["constants/*"],
+			"@providers/*": ["infra/providers/*"],
+			"@infra/*": ["infra/*"],
 			"@rdc/transactional": ["../../packages/transactional/index.ts"],
 			"@/*": ["*"]
 		},
