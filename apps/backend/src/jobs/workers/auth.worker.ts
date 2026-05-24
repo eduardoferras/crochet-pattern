@@ -2,16 +2,20 @@ import redisConnection from "@config/redis.ts";
 import { QUEUES } from "@constants/queue.constant.ts";
 import { PasswordResetEmail } from "@rdc/transactional";
 import { render } from "@react-email/render";
-import sendEmail from "@services/mail.service.ts";
+import { NotifierFactory } from "@services/notifications/notifier.factory.ts";
 import { BaseWorker } from "@workers/base.worker.ts";
 import type { Job } from "bullmq";
-import type { ResetPasswordPayload } from "@/types/auth.types.ts";
+import type { ResetPasswordPayload } from "@/types/auth.type.ts";
 
 export class AuthWorker extends BaseWorker {
-	constructor() {
+	private readonly notifierFactory: NotifierFactory;
+
+	constructor(notifierFactory?: NotifierFactory) {
 		super(QUEUES.AUTH.NAME, {
 			connection: redisConnection,
 		});
+
+		this.notifierFactory = notifierFactory || new NotifierFactory();
 	}
 
 	private consumerPasswordReset = async (data: ResetPasswordPayload) => {
@@ -21,16 +25,20 @@ export class AuthWorker extends BaseWorker {
 			PasswordResetEmail({ resetLink: url, userEmail: user.email }),
 		);
 
-		await sendEmail({
+		const messagePayload = {
 			to: user.email,
 			subject: "Redefinição de Senha - Receitas de Crochê",
 			body: htmlBody,
-		});
+		};
+
+		const notifier = this.notifierFactory.create("email");
+		await notifier.send(messagePayload);
 	};
 
 	async process(job: Job) {
 		try {
-			console.log("🤖 [Worker] Aguardando novos jobs na fila de e-mails...");
+			console.log(`[AuthWorker] Processing Job ${job.id} - ${job.name}`);
+
 			switch (job.name) {
 				case QUEUES.AUTH.JOBS.PASSWORD_RESET: {
 					await this.consumerPasswordReset(job.data);
@@ -42,7 +50,7 @@ export class AuthWorker extends BaseWorker {
 			}
 		} catch (error) {
 			console.error(
-				`[AuthWorker] Error processing Job ${job.id} (${job.name}):`,
+				`[AuthWorker] Error processing Job ${job.id} - (${job.name}):`,
 				error,
 			);
 

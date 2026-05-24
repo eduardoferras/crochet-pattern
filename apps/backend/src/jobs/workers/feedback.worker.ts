@@ -2,19 +2,23 @@ import redisConnection from "@config/redis.ts";
 import { QUEUES } from "@constants/queue.constant.ts";
 import { FeedbackNotificationEmail } from "@rdc/transactional";
 import { render } from "@react-email/render";
-import sendEmail from "@services/mail.service.ts";
+import { NotifierFactory } from "@services/notifications/notifier.factory.ts";
 import type { FeedbackSchema } from "@validations/feedback.validation.ts";
 import { BaseWorker } from "@workers/base.worker.ts";
 import type { Job } from "bullmq";
 
 export class FeedbackWorker extends BaseWorker {
-	constructor() {
+	private readonly notifierFactory: NotifierFactory;
+
+	constructor(notifierFactory?: NotifierFactory) {
 		super(QUEUES.FEEDBACK.NAME, {
 			connection: redisConnection,
 		});
+
+		this.notifierFactory = notifierFactory || new NotifierFactory();
 	}
 
-	async consumerSendFeedbackEmail(data: FeedbackSchema) {
+	private consumerSendFeedbackEmail = async (data: FeedbackSchema) => {
 		const { screenshot, feedback, type } = data;
 
 		const htmlBody = await render(
@@ -29,24 +33,21 @@ export class FeedbackWorker extends BaseWorker {
 			});
 		}
 
-		try {
-			await sendEmail({
-				to: "eduardo@ftndigital.com.br",
-				subject: "Feedback Recebido - Receitas de Crochê",
-				body: htmlBody,
-				attachments,
-			});
-		} catch (error) {
-			console.error("Error processing feedback job:", error);
-			throw error;
-		}
-	}
+		const messagePayload = {
+			to: "eduardo@ftndigital.com.br",
+			subject: "Feedback Recebido - Receitas de Crochê",
+			body: htmlBody,
+			attachments,
+		};
+
+		const notifier = this.notifierFactory.create("email");
+		await notifier.send(messagePayload);
+	};
 
 	async process(job: Job<FeedbackSchema>) {
 		try {
-			console.log(
-				`🤖 [Worker] Aguardando novos jobs na fila ${QUEUES.FEEDBACK.NAME} ...`,
-			);
+			console.log(`[FeedbackWorker] Processing Job ${job.id} - ${job.name}`);
+
 			switch (job.name) {
 				case QUEUES.FEEDBACK.JOBS.SEND_EMAIL: {
 					await this.consumerSendFeedbackEmail(job.data);
