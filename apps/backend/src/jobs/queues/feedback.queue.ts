@@ -1,5 +1,5 @@
-import redisConnection from "@config/redis.ts";
 import { QUEUES } from "@constants/queue.constant.ts";
+import redisConnection from "@databases/redis/index.ts";
 import { BaseQueue } from "@queues/base.queue.ts";
 
 export class FeedbackQueue extends BaseQueue {

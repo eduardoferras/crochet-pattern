@@ -1,8 +1,8 @@
 import { redisStorage } from "@better-auth/redis-storage";
 import { env } from "@config/env.config.ts";
-import redisConnection from "@config/redis.ts";
 import { QUEUES } from "@constants/queue.constant.ts";
 import db from "@databases/index.ts";
+import redisConnection from "@databases/redis/index.ts";
 import { authQueue } from "@queues/auth.queue.ts";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";

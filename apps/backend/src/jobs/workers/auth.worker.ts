@@ -1,5 +1,5 @@
-import redisConnection from "@config/redis.ts";
 import { QUEUES } from "@constants/queue.constant.ts";
+import redisConnection from "@databases/redis/index.ts";
 import { PasswordResetEmail } from "@rdc/transactional";
 import { render } from "@react-email/render";
 import { NotifierFactory } from "@services/notifications/notifier.factory.ts";

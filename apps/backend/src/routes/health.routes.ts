@@ -1,4 +1,4 @@
-import redisConnection from "@config/redis.ts";
+import redisConnection from "@databases/redis/index.ts";
 import { Router } from "express";
 
 const healthRouter = Router();
