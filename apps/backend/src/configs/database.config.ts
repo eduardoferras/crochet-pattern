@@ -1,4 +1,4 @@
-import { env } from "@config/env.config.ts";
+import { env } from "@configs/env.config.ts";
 
 export const databaseConfig = {
 	host: env.DB_HOST,

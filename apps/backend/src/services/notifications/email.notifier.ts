@@ -1,4 +1,4 @@
-import { env } from "@config/env.config.ts";
+import { env } from "@configs/env.config.ts";
 import { Resend } from "resend";
 import type { INotification } from "@/interfaces/notification.interface.ts";
 import type { EmailPayload } from "@/types/email.type.ts";

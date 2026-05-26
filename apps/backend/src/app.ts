@@ -1,6 +1,6 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { corsOptions } from "@config/cors.config.ts";
+import { corsOptions } from "@configs/cors.config.ts";
 import { initCrons } from "@crons/index.ts";
 import { AppRoutes } from "@routes/index.ts";
 import { WorkerRegistry } from "@workers/index.ts";

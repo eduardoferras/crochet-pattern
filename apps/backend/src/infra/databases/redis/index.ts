@@ -1,4 +1,4 @@
-import { env } from "@config/env.config.ts";
+import { env } from "@configs/env.config.ts";
 import { Redis } from "ioredis";
 
 const redisConnection = new Redis(env.REDIS_URL, {

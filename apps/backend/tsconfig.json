@@ -16,7 +16,7 @@
 			"@queues/*": ["jobs/queues/*"],
 			"@workers/*": ["jobs/workers/*"],
 			"@jobs/*": ["jobs/*"],
-			"@config/*": ["config/*"],
+			"@configs/*": ["configs/*"],
 			"@services/*": ["services/*"],
 			"@validations/*": ["validations/*"],
 			"@crons/*": ["crons/*"],

@@ -1,4 +1,4 @@
-import { env } from "@config/env.config.ts";
+import { env } from "@configs/env.config.ts";
 import App from "@/app.ts";
 
 async function bootstrap() {
