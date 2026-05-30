@@ -1,5 +1,5 @@
 import { env } from "@configs/env.config.ts";
-import type Product from "@/types/product.types.ts";
+import type { Product } from "@/types/product.type.ts";
 
 const products: Product[] = [
 	{
