@@ -9,7 +9,6 @@
 		"baseUrl": "./src",
 		"ignoreDeprecations": "6.0",
 		"paths": {
-			"@routes/*": ["routes/*"],
 			"@middlewares/*": ["middlewares/*"],
 			"@controllers/*": ["controllers/*"],
 			"@utils/*": ["utils/*"],
@@ -21,6 +20,7 @@
 			"@validations/*": ["validations/*"],
 			"@crons/*": ["crons/*"],
 			"@constants/*": ["constants/*"],
+			"@routes/*": ["infrastructure/http/routes/*"],
 			"@auth/*": ["infrastructure/auth/*"],
 			"@databases/*": ["infrastructure/databases/*"],
 			"@infrastructure/*": ["infrastructure/*"],
