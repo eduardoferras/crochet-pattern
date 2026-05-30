@@ -21,7 +21,7 @@
 			"@validations/*": ["validations/*"],
 			"@crons/*": ["crons/*"],
 			"@constants/*": ["constants/*"],
-			"@providers/*": ["infrastructure/providers/*"],
+			"@auth/*": ["infrastructure/auth/*"],
 			"@databases/*": ["infrastructure/databases/*"],
 			"@infrastructure/*": ["infrastructure/*"],
 			"@rdc/transactional": ["../../packages/transactional/index.ts"],

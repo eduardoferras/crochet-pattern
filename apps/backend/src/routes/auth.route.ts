@@ -1,4 +1,4 @@
-import { auth } from "@providers/auth/auth-client.ts";
+import { auth } from "@auth/index.ts";
 import { fromNodeHeaders, toNodeHandler } from "better-auth/node";
 import { Router } from "express";
 
