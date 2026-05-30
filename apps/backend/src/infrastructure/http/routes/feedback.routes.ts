@@ -1,5 +1,5 @@
 import { feedbackController } from "@controllers/feedback.controller.ts";
-import validateBody from "@middlewares/validateBody.middleware.ts";
+import { RequestValidatorMiddleware } from "@middlewares/request-validator.middleware.ts";
 import { feedbackZodSchema } from "@validations/feedback.validation.ts";
 import { Router } from "express";
 
@@ -7,7 +7,7 @@ const feedbackRouter = Router();
 
 feedbackRouter.post(
 	"/",
-	validateBody(feedbackZodSchema),
+	RequestValidatorMiddleware.body(feedbackZodSchema),
 	feedbackController.create,
 );
 

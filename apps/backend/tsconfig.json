@@ -9,7 +9,6 @@
 		"baseUrl": "./src",
 		"ignoreDeprecations": "6.0",
 		"paths": {
-			"@middlewares/*": ["middlewares/*"],
 			"@controllers/*": ["controllers/*"],
 			"@utils/*": ["utils/*"],
 			"@queues/*": ["jobs/queues/*"],
@@ -20,6 +19,7 @@
 			"@validations/*": ["validations/*"],
 			"@crons/*": ["crons/*"],
 			"@constants/*": ["constants/*"],
+			"@middlewares/*": ["infrastructure/http/middlewares/*"],
 			"@routes/*": ["infrastructure/http/routes/*"],
 			"@auth/*": ["infrastructure/auth/*"],
 			"@databases/*": ["infrastructure/databases/*"],
