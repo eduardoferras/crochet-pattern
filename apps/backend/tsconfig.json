@@ -16,7 +16,7 @@
 			"@services/*": ["services/*"],
 			"@validations/*": ["validations/*"],
 			"@crons/*": ["crons/*"],
-			"@constants/*": ["constants/*"],
+			"@constants/*": ["infrastructure/constants/*"],
 			"@configs/*": ["infrastructure/configs/*"],
 			"@controllers/*": ["infrastructure/http/controllers/*"],
 			"@middlewares/*": ["infrastructure/http/middlewares/*"],

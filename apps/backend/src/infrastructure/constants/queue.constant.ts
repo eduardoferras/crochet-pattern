@@ -12,5 +12,3 @@ export const QUEUES = {
 		},
 	},
 } as const;
-
-export type QueueNames = (typeof QUEUES)[keyof typeof QUEUES];
