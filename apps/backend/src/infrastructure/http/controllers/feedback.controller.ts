@@ -1,18 +1,14 @@
-import {
-	type FeedbackService,
-	feedbackService,
-} from "@services/feedback.service.ts";
+import type CreateFeedbackUseCase from "@usecases/feedback/create-feedback.usecase.ts";
 import type { FeedbackSchema } from "@validations/feedback.validation.ts";
 import type { Request, Response } from "express";
 
 export class FeedbackController {
-	constructor(private feedbackService: FeedbackService) {}
+	constructor(readonly createFeedback: CreateFeedbackUseCase) {}
 
-	create = async (req: Request, res: Response) => {
+	async create(req: Request, res: Response) {
 		try {
 			const data: FeedbackSchema = req.body;
-
-			await this.feedbackService.create(data);
+			await this.createFeedback.execute(data);
 
 			return res
 				.status(200)
@@ -24,7 +20,5 @@ export class FeedbackController {
 				.status(500)
 				.json({ message: "Internal server error sending feedback" });
 		}
-	};
+	}
 }
-
-export const feedbackController = new FeedbackController(feedbackService);
