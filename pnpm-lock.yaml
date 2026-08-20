@@ -16,7 +16,7 @@ importers:
     dependencies:
       '@better-auth/redis-storage':
         specifier: 1.5.3
-        version: 1.5.3(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))(ioredis@5.9.1)
+        version: 1.5.3(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))(ioredis@5.11.1)
       '@rdc/transactional':
         specifier: workspace:*
         version: link:../../packages/transactional
@@ -42,8 +42,8 @@ importers:
         specifier: 5.2.1
         version: 5.2.1
       ioredis:
-        specifier: 5.9.1
-        version: 5.9.1
+        specifier: 5.11.1
+        version: 5.11.1
       node-cron:
         specifier: 4.2.1
         version: 4.2.1
@@ -104,7 +104,7 @@ importers:
         version: 1.15.0(magicast@0.5.1)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
       '@nuxt/image':
         specifier: 1.11.0
-        version: 1.11.0(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1)(magicast@0.5.1)
+        version: 1.11.0(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1)(magicast@0.5.1)
       '@nuxtjs/fontaine':
         specifier: 0.5.0
         version: 0.5.0(magicast@0.5.1)
@@ -125,7 +125,7 @@ importers:
         version: 1.11.13
       nuxt:
         specifier: 3.20.2
-        version: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
+        version: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
       pinia:
         specifier: 3.0.4
         version: 3.0.4(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
@@ -156,7 +156,7 @@ importers:
         version: 2.4.6
       '@zadigetvoltaire/nuxt-gtm':
         specifier: 0.0.13
-        version: 0.0.13(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
+        version: 0.0.13(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -1051,11 +1051,11 @@ packages:
 
   '@esbuild-kit/core-utils@3.3.2':
     resolution: {integrity: sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ==}
-    deprecated: 'Merged into tsx: https://tsx.is'
+    deprecated: 'Merged into tsx: https://tsx.hirok.io'
 
   '@esbuild-kit/esm-loader@2.6.5':
     resolution: {integrity: sha512-FxEMIkJKnodyA1OaCUoEvbYRkoZlLZ4d/eXFu9Fh8CbBBgP5EmZxrfTRyN0qpXZ4vOvqnE5YdRdcrmUUXuU+dA==}
-    deprecated: 'Merged into tsx: https://tsx.is'
+    deprecated: 'Merged into tsx: https://tsx.hirok.io'
 
   '@esbuild/aix-ppc64@0.25.12':
     resolution: {integrity: sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==}
@@ -1857,6 +1857,9 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
+
+  '@ioredis/commands@1.10.0':
+    resolution: {integrity: sha512-UmeW7z4LfctwoQ5wkhVzgq8tXkreED2xZGpX+Bg+zA+WJFZCT6c062AfCK/Dfk81xZnnwdhJCUMkitihRaoC2Q==}
 
   '@ioredis/commands@1.5.0':
     resolution: {integrity: sha512-eUgLqrMf8nJkZxT24JvVRrQya1vZkQh8BBeYNwGDqa5I0VUi8ACx7uFvAaLxintokpTenkK6DASvo/bvNbBGow==}
@@ -2814,99 +2817,116 @@ packages:
   '@react-email/body@0.2.1':
     resolution: {integrity: sha512-ljDiQiJDu/Fq//vSIIP0z5Nuvt4+DX1RqGasstChDGJB/14ogd4VdNS9aacoede/ZjGy3o3Qb+cxyS+XgM6SwQ==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/button@0.2.1':
     resolution: {integrity: sha512-qXyj7RZLE7POy9BMKSoqQ00tOXThjOZSUnI2Yu9i29IHngPlmrNayIWBoVKtElES7OWwypUcpiajwi1mUWx6/A==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/code-block@0.2.1':
     resolution: {integrity: sha512-M3B7JpVH4ytgn83/ujRR1k1DQHvTeABiDM61OvAbjLRPhC/5KLHU5KkzIbbuGIrjWwxAbL1kSQzU8MhLEtSxyw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/code-inline@0.0.6':
     resolution: {integrity: sha512-jfhebvv3dVsp3OdPgKXnk8+e2pBiDVZejDOBFzBa/IblrAJ9cQDkN6rBD5IyEg8hTOxwbw3iaI/yZFmDmIguIA==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/column@0.0.14':
     resolution: {integrity: sha512-f+W+Bk2AjNO77zynE33rHuQhyqVICx4RYtGX9NKsGUg0wWjdGP0qAuIkhx9Rnmk4/hFMo1fUrtYNqca9fwJdHg==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/components@1.0.7':
     resolution: {integrity: sha512-mY+v4C1SMaGOKuKp0QWDQLGK+3fvH06ZE10EVavv+T6tQneDHq9cpQ9NdCrvuO1nWZnWrA/0tRpvyqyF0uo93w==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/container@0.0.16':
     resolution: {integrity: sha512-QWBB56RkkU0AJ9h+qy33gfT5iuZknPC7Un/IjZv9B0QmMIK+WWacc0cH6y2SV5Cv/b99hU94fjEMOOO4enpkbQ==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/font@0.0.10':
     resolution: {integrity: sha512-0urVSgCmQIfx5r7Xc586miBnQUVnGp3OTYUm8m5pwtQRdTRO5XrTtEfNJ3JhYhSOruV0nD8fd+dXtKXobum6tA==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/head@0.0.13':
     resolution: {integrity: sha512-AJg6le/08Gz4tm+6MtKXqtNNyKHzmooOCdmtqmWxD7FxoAdU1eVcizhtQ0gcnVaY6ethEyE/hnEzQxt1zu5Kog==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/heading@0.0.16':
     resolution: {integrity: sha512-jmsKnQm1ykpBzw4hCYHwBkt5pW2jScXffPeEH5ZRF5tZeF5b1pvlFTO9han7C0pCkZYo1kEvWiRtx69yfCIwuw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/hr@0.0.12':
     resolution: {integrity: sha512-TwmOmBDibavUQpXBxpmZYi2Iks/yeZOzFYh+di9EltMSnEabH8dMZXrl+pxNXzCgZ2XE8HY7VmUL65Lenfu5PA==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/html@0.0.12':
     resolution: {integrity: sha512-KTShZesan+UsreU7PDUV90afrZwU5TLwYlALuCSU0OT+/U8lULNNbAUekg+tGwCnOfIKYtpDPKkAMRdYlqUznw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/img@0.0.12':
     resolution: {integrity: sha512-sRCpEARNVTf3FQhZOC+JTvu5r6ubiYWkT0ucYXg8ctkyi4G8QG+jgYPiNUqVeTLA2STOfmPM/nrk1nb84y6CPQ==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/link@0.0.13':
     resolution: {integrity: sha512-lkWc/NjOcefRZMkQoSDDbuKBEBDES9aXnFEOuPH845wD3TxPwh+QTf0fStuzjoRLUZWpHnio4z7qGGRYusn/sw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/markdown@0.0.18':
     resolution: {integrity: sha512-gSuYK5fsMbGk87jDebqQ6fa2fKcWlkf2Dkva8kMONqLgGCq8/0d+ZQYMEJsdidIeBo3kmsnHZPrwdFB4HgjUXg==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/preview-server@5.2.6':
     resolution: {integrity: sha512-aymUlIpBW0cjJr+QZa6sAD57FEA9ujGqtUTHTXjpz5eGhn6nKJQlqHClNS7H22RriH1aCE7hqMsPzljvzH0Y6g==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@react-email/preview@0.0.14':
     resolution: {integrity: sha512-aYK8q0IPkBXyMsbpMXgxazwHxYJxTrXrV95GFuu2HbEiIToMwSyUgb8HDFYwPqqfV03/jbwqlsXmFxsOd+VNaw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
@@ -2920,18 +2940,21 @@ packages:
   '@react-email/row@0.0.13':
     resolution: {integrity: sha512-bYnOac40vIKCId7IkwuLAAsa3fKfSfqCvv6epJKmPE0JBuu5qI4FHFCl9o9dVpIIS08s/ub+Y/txoMt0dYziGw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/section@0.0.17':
     resolution: {integrity: sha512-qNl65ye3W0Rd5udhdORzTV9ezjb+GFqQQSae03NDzXtmJq6sqVXNWNiVolAjvJNypim+zGXmv6J9TcV5aNtE/w==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@react-email/tailwind@2.0.4':
     resolution: {integrity: sha512-cDp8Ss6LJKI8zBLKE+tsXFurn6I2nnQNg1qqjfZuNPNoToN1Uyx3egW0bwSVk1JjrNWx/Xnme7ZxvNLRrU9K0Q==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       '@react-email/body': 0.2.1
       '@react-email/button': 0.2.1
@@ -2970,6 +2993,7 @@ packages:
   '@react-email/text@0.1.6':
     resolution: {integrity: sha512-TYqkioRS45wTR5il3dYk/SbUjjEdhSwh9BtRNB99qNH1pXAwA45H7rAuxehiu8iJQJH0IyIr+6n62gBz9ezmsw==}
     engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
@@ -3528,6 +3552,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@unhead/vue@2.1.2':
     resolution: {integrity: sha512-w5yxH/fkkLWAFAOnMSIbvAikNHYn6pgC7zGF/BasXf+K3CO1cYIPFehYAk5jpcsbiNPMc3goyyw1prGLoyD14g==}
@@ -3846,6 +3871,7 @@ packages:
   '@xmldom/xmldom@0.8.11':
     resolution: {integrity: sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@zadigetvoltaire/nuxt-gtm@0.0.13':
     resolution: {integrity: sha512-7SgXtIB8uLdLGJaoUAQSGCSbRnNzplNkNVFKIHaVI4We0vqghstBoVPlJCJ9VdwsfdNyk3/C+Lh1uKpzTrtEuw==}
@@ -4466,6 +4492,10 @@ packages:
     resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
     engines: {node: '>=0.8'}
 
+  cluster-key-slot@1.1.1:
+    resolution: {integrity: sha512-rwHwUfXL40Chm1r08yrhU3qpUvdVlgkKNeyeGPOxnW8/SyVDvgRaed/Uz54AqWNaTCAThlj6QAs3TZcKI0xDEw==}
+    engines: {node: '>=0.10.0'}
+
   cluster-key-slot@1.1.2:
     resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
     engines: {node: '>=0.10.0'}
@@ -4627,6 +4657,7 @@ packages:
   cron-parser@4.9.0:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
+    deprecated: v4 is no longer maintained, upgrade to v5
 
   croner@9.1.0:
     resolution: {integrity: sha512-p9nwwR4qyT5W996vBZhdvBCnMhicY5ytZkR4D1Xj0wuTDEiMnjwR57Q3RXYY/s0EpX6Ay3vgIcfaR+ewGHsi+g==}
@@ -5252,6 +5283,7 @@ packages:
   eslint@9.39.2:
     resolution: {integrity: sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -5918,6 +5950,10 @@ packages:
 
   invariant@2.2.4:
     resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
+
+  ioredis@5.11.1:
+    resolution: {integrity: sha512-ehuGcf94bQXhfagULNXrJdfnWO38v070jxSx/qE87Kjzmu2fU7ro5EFAb+OPituLqgfyuQaym5DlrNydW2sJ9A==}
+    engines: {node: '>=12.22.0'}
 
   ioredis@5.9.1:
     resolution: {integrity: sha512-BXNqFQ66oOsR82g9ajFFsR8ZKrjVvYCLyeML9IvSMAsP56XH2VXBdZjmI11p65nXXJxTEt1hie3J2QeFJVgrtQ==}
@@ -7371,6 +7407,7 @@ packages:
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   prelude-ls@1.2.1:
@@ -8479,6 +8516,7 @@ packages:
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
     engines: {node: ^18 || >=20}
+    deprecated: unmaintained
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -8645,6 +8683,7 @@ packages:
 
   unplugin-vue-router@0.19.2:
     resolution: {integrity: sha512-u5dgLBarxE5cyDK/hzJGfpCTLIAyiTXGlo85COuD4Nssj6G7NxS+i9mhCWz/1p/ud1eMwdcUbTXehQe41jYZUA==}
+    deprecated: 'Merged into vuejs/router. Migrate: https://router.vuejs.org/guide/migration/v4-to-v5.html'
     peerDependencies:
       '@vue/compiler-sfc': ^3.5.17
       vue-router: ^4.6.0
@@ -8787,6 +8826,7 @@ packages:
 
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   uuid@11.1.0:
@@ -8799,6 +8839,7 @@ packages:
 
   uuid@7.0.3:
     resolution: {integrity: sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validate-npm-package-name@5.0.1:
@@ -9935,10 +9976,10 @@ snapshots:
       nanostores: 1.1.0
       zod: 4.3.5
 
-  '@better-auth/redis-storage@1.5.3(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))(ioredis@5.9.1)':
+  '@better-auth/redis-storage@1.5.3(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))(ioredis@5.11.1)':
     dependencies:
       '@better-auth/core': 1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0)
-      ioredis: 5.9.1
+      ioredis: 5.11.1
 
   '@better-auth/telemetry@1.4.13(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))':
     dependencies:
@@ -10963,6 +11004,8 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.2.1
 
+  '@ioredis/commands@1.10.0': {}
+
   '@ioredis/commands@1.5.0': {}
 
   '@isaacs/balanced-match@4.0.1': {}
@@ -11379,7 +11422,7 @@ snapshots:
       - vite
       - vue
 
-  '@nuxt/image@1.11.0(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1)(magicast@0.5.1)':
+  '@nuxt/image@1.11.0(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1)(magicast@0.5.1)':
     dependencies:
       '@nuxt/kit': 3.20.2(magicast@0.5.1)
       consola: 3.4.2
@@ -11392,7 +11435,7 @@ snapshots:
       std-env: 3.10.0
       ufo: 1.6.3
     optionalDependencies:
-      ipx: 2.1.1(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1)
+      ipx: 2.1.1(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -11469,7 +11512,7 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/nitro-server@3.20.2(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(ioredis@5.9.1)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(typescript@5.9.3)':
+  '@nuxt/nitro-server@3.20.2(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(ioredis@5.11.1)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(typescript@5.9.3)':
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/kit': 3.20.2(magicast@0.5.1)
@@ -11487,14 +11530,14 @@ snapshots:
       klona: 2.0.6
       mocked-exports: 0.1.1
       nitropack: 2.13.1(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))
-      nuxt: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
+      nuxt: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
       pathe: 2.0.3
       pkg-types: 2.3.0
       radix3: 1.1.2
       std-env: 3.10.0
       ufo: 1.6.3
       unctx: 2.5.0
-      unstorage: 1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1)
+      unstorage: 1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1)
       vue: 3.5.26(typescript@5.9.3)
       vue-bundle-renderer: 2.2.0
       vue-devtools-stub: 0.1.0
@@ -11598,7 +11641,7 @@ snapshots:
       - magicast
       - typescript
 
-  '@nuxt/vite-builder@3.20.2(@biomejs/biome@2.3.11)(@types/node@25.2.1)(eslint@9.39.2(jiti@2.6.1))(lightningcss@1.31.0)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))(yaml@2.8.2)':
+  '@nuxt/vite-builder@3.20.2(@biomejs/biome@2.3.11)(@types/node@25.2.1)(eslint@9.39.2(jiti@2.6.1))(lightningcss@1.31.0)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
       '@nuxt/kit': 3.20.2(magicast@0.5.1)
       '@rollup/plugin-replace': 6.0.3(rollup@4.55.2)
@@ -11619,7 +11662,7 @@ snapshots:
       magic-string: 0.30.21
       mlly: 1.8.0
       mocked-exports: 0.1.1
-      nuxt: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
+      nuxt: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
       ohash: 2.0.11
       pathe: 2.0.3
       perfect-debounce: 2.0.0
@@ -13308,12 +13351,12 @@ snapshots:
 
   '@xmldom/xmldom@0.8.11': {}
 
-  '@zadigetvoltaire/nuxt-gtm@0.0.13(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))':
+  '@zadigetvoltaire/nuxt-gtm@0.0.13(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
       '@gtm-support/vue-gtm': 2.2.0(vue@3.5.26(typescript@5.9.3))
       '@nuxt/kit': 3.20.2(magicast@0.5.1)
       defu: 6.1.4
-      nuxt: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
+      nuxt: 3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2)
       sirv: 2.0.4
     transitivePeerDependencies:
       - magicast
@@ -13994,6 +14037,8 @@ snapshots:
   clone@1.0.4: {}
 
   clone@2.1.2: {}
+
+  cluster-key-slot@1.1.1: {}
 
   cluster-key-slot@1.1.2: {}
 
@@ -15526,6 +15571,18 @@ snapshots:
     dependencies:
       loose-envify: 1.4.0
 
+  ioredis@5.11.1:
+    dependencies:
+      '@ioredis/commands': 1.10.0
+      cluster-key-slot: 1.1.1
+      debug: 4.4.3
+      denque: 2.1.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
+      standard-as-callback: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+
   ioredis@5.9.1:
     dependencies:
       '@ioredis/commands': 1.5.0
@@ -15542,7 +15599,7 @@ snapshots:
 
   ipaddr.js@1.9.1: {}
 
-  ipx@2.1.1(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1):
+  ipx@2.1.1(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1):
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       citty: 0.1.6
@@ -15558,7 +15615,7 @@ snapshots:
       sharp: 0.32.6
       svgo: 3.3.2
       ufo: 1.6.3
-      unstorage: 1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1)
+      unstorage: 1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1)
       xss: 1.0.15
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -16457,7 +16514,7 @@ snapshots:
       h3: 1.15.5
       hookable: 5.5.3
       httpxy: 0.1.7
-      ioredis: 5.9.1
+      ioredis: 5.11.1
       jiti: 2.6.1
       klona: 2.0.6
       knitwork: 1.3.0
@@ -16490,7 +16547,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       unimport: 5.6.0
       unplugin-utils: 0.3.1
-      unstorage: 1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1)
+      unstorage: 1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1)
       untyped: 2.0.0
       unwasm: 0.5.3
       youch: 4.1.0-beta.13
@@ -16592,16 +16649,16 @@ snapshots:
 
   nullthrows@1.1.1: {}
 
-  nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2):
+  nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2):
     dependencies:
       '@dxup/nuxt': 0.2.2(magicast@0.5.1)
       '@nuxt/cli': 3.32.0(cac@6.7.14)(commander@13.1.0)(magicast@0.5.1)
       '@nuxt/devtools': 3.1.1(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
       '@nuxt/kit': 3.20.2(magicast@0.5.1)
-      '@nuxt/nitro-server': 3.20.2(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(ioredis@5.9.1)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(typescript@5.9.3)
+      '@nuxt/nitro-server': 3.20.2(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(ioredis@5.11.1)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(typescript@5.9.3)
       '@nuxt/schema': 3.20.2
       '@nuxt/telemetry': 2.6.6(magicast@0.5.1)
-      '@nuxt/vite-builder': 3.20.2(@biomejs/biome@2.3.11)(@types/node@25.2.1)(eslint@9.39.2(jiti@2.6.1))(lightningcss@1.31.0)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))(yaml@2.8.2)
+      '@nuxt/vite-builder': 3.20.2(@biomejs/biome@2.3.11)(@types/node@25.2.1)(eslint@9.39.2(jiti@2.6.1))(lightningcss@1.31.0)(magicast@0.5.1)(nuxt@3.20.2(@biomejs/biome@2.3.11)(@parcel/watcher@2.5.4)(@types/node@25.2.1)(@vue/compiler-sfc@3.5.27)(cac@6.7.14)(commander@13.1.0)(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.11.1)(lightningcss@1.31.0)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(yaml@2.8.2))(optionator@0.9.4)(rollup@4.55.2)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))(yaml@2.8.2)
       '@unhead/vue': 2.1.2(vue@3.5.26(typescript@5.9.3))
       '@vue/shared': 3.5.27
       c12: 3.3.3(magicast@0.5.1)
@@ -18762,7 +18819,7 @@ snapshots:
       '@unrs/resolver-binding-win32-ia32-msvc': 1.11.1
       '@unrs/resolver-binding-win32-x64-msvc': 1.11.1
 
-  unstorage@1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.9.1):
+  unstorage@1.17.4(db0@0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8)))(ioredis@5.11.1):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -18774,7 +18831,7 @@ snapshots:
       ufo: 1.6.3
     optionalDependencies:
       db0: 0.3.4(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(pg@8.17.1)(postgres@3.4.8))
-      ioredis: 5.9.1
+      ioredis: 5.11.1
 
   untun@0.1.3:
     dependencies:
