@@ -1,36 +1,39 @@
-# dependencies
-node_modules
+# Dependencies and local stores
+**/node_modules
 .pnpm-store
+.npm
 
-# misc
-.DS_Store
-*.pem
-.fleet
-.idea
-Thumbs.db
-**/*.Identifier
-README.md
-./dev
+# Other workspace applications are not used by the backend image
+apps/frontend
+apps/mobile
 
-# Logs and caches
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-.cache
-.nuxt
-dist
-build
-coverage
-logs
+# Build output, caches and test artifacts
+**/.nuxt
+**/.output
+**/dist
+**/build
+**/coverage
+**/.cache
+**/logs
 *.log
+*.tsbuildinfo
 
-# editor config
+# Local configuration and development files
+.env*
+!.env.example
+dev
 .vscode
+.fleet
 .idea
 *.swp
 *.swo
 *.iml
 
-# git
+# Repository metadata and miscellaneous files
 .git
 .gitignore
+.DS_Store
+Thumbs.db
+**/*.Identifier
+**/*.pem
+**/README.md
