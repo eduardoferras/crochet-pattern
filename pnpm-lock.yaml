@@ -159,7 +159,7 @@ snapshots:
 lockfileVersion: '9.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 importers:
@@ -174,7 +174,7 @@ importers:
     dependencies:
       '@better-auth/redis-storage':
         specifier: 1.5.3
-        version: 1.5.3(ioredis@5.9.1(supports-color@10.2.2))
+        version: 1.5.3(@better-auth/core@1.5.3(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))(ioredis@5.9.1(supports-color@10.2.2))
       '@rdc/transactional':
         specifier: workspace:*
         version: link:../../packages/transactional
@@ -277,7 +277,7 @@ importers:
         version: 14.1.0(vue@3.5.26(typescript@5.9.3))
       better-auth:
         specifier: 1.4.13
-        version: 1.4.13(drizzle-kit@0.31.8(supports-color@10.2.2))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(postgres@3.4.8))(next@16.0.11(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@3.2.4(@types/node@25.2.1)(happy-dom@17.6.3)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(supports-color@10.2.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
+        version: 1.4.13(drizzle-kit@0.31.8(supports-color@10.2.2))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(postgres@3.4.8))(next@16.0.11(@babel/core@7.28.6(supports-color@10.2.2))(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@3.2.4(@types/node@25.2.1)(happy-dom@17.6.3)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(supports-color@10.2.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
       html-to-image:
         specifier: 1.11.13
         version: 1.11.13
@@ -368,7 +368,7 @@ importers:
         version: 8.0.11(expo@54.0.31)(react-native@0.83.1(@babel/core@7.28.6(supports-color@10.2.2))(@types/react@19.2.8)(react@19.2.3)(supports-color@10.2.2))(react@19.2.3)(supports-color@10.2.2)
       expo-router:
         specifier: 6.0.21
-        version: 6.0.21(05b82a1aa0fc87c6050a3876edc728fd)
+        version: 6.0.21(2194196665ff088e07b2fbcc29e1ff03)
       expo-splash-screen:
         specifier: 31.0.13
         version: 31.0.13(expo@54.0.31)(supports-color@10.2.2)
@@ -1012,6 +1012,20 @@ packages:
       jose: ^6.1.0
       kysely: ^0.28.5
       nanostores: ^1.0.1
+
+  '@better-auth/core@1.5.3':
+    resolution: {integrity: sha512-fORsQjNZ6BQ7o96xMe7elz3Y4Y8DsqXmQrdyzt289G9rmzX4auwBCPTtE2cXTRTYGiVvH9bv0b97t1Uo/OWynQ==}
+    peerDependencies:
+      '@better-auth/utils': 0.3.1
+      '@better-fetch/fetch': 1.1.21
+      '@cloudflare/workers-types': '>=4'
+      better-call: 1.3.2
+      jose: ^6.1.0
+      kysely: ^0.28.5
+      nanostores: ^1.0.1
+    peerDependenciesMeta:
+      '@cloudflare/workers-types':
+        optional: true
 
   '@better-auth/redis-storage@1.5.3':
     resolution: {integrity: sha512-UmCGGezeYTxMLgxo55mee2T2zg2shV6tJqxHZS04YFH+YgO5wHcA/YLERfAOXpqpoLO5UGyoLzWXHs2+2VYgfA==}
@@ -3163,6 +3177,8 @@ packages:
   '@react-native/babel-preset@0.81.5':
     resolution: {integrity: sha512-UoI/x/5tCmi+pZ3c1+Ypr1DaRMDLI3y+Q70pVLLVgrnC3DHsHRIbHcCHIeG/IJvoeFqFM2sTdhSOLJrf8lOPrA==}
     engines: {node: '>= 20.19.4'}
+    peerDependencies:
+      '@babel/core': '*'
 
   '@react-native/codegen@0.81.5':
     resolution: {integrity: sha512-a2TDA03Up8lpSa9sh5VRGCQDXgCTOyDOFH+aqyinxp1HChG8uk89/G+nkJ9FPd0rqgi25eCTR16TWdS3b+fA6g==}
@@ -3173,6 +3189,8 @@ packages:
   '@react-native/codegen@0.83.1':
     resolution: {integrity: sha512-FpRxenonwH+c2a5X5DZMKUD7sCudHxB3eSQPgV9R+uxd28QWslyAWrpnJM/Az96AEksHnymDzEmzq2HLX5nb+g==}
     engines: {node: '>= 20.19.4'}
+    peerDependencies:
+      '@babel/core': '*'
 
   '@react-native/community-cli-plugin@0.83.1':
     resolution: {integrity: sha512-FqR1ftydr08PYlRbrDF06eRiiiGOK/hNmz5husv19sK6iN5nHj1SMaCIVjkH/a5vryxEddyFhU6PzO/uf4kOHg==}
@@ -5544,6 +5562,7 @@ packages:
   expo-router@6.0.21:
     resolution: {integrity: sha512-wjTUjrnWj6gRYjaYl1kYfcRnNE4ZAQ0kz0+sQf6/mzBd/OU6pnOdD7WrdAW3pTTpm52Q8sMoeX98tNQEddg2uA==}
     peerDependencies:
+      '@expo/metro-runtime': ^6.1.2
       '@react-navigation/drawer': ^7.5.0
       '@testing-library/react-native': '>= 12.0.0'
       expo: '*'
@@ -9394,6 +9413,9 @@ packages:
   zod@4.3.5:
     resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
+  zod@4.6.5:
+    resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
+
 snapshots:
 
   '@0no-co/graphql.web@1.2.0': {}
@@ -10077,8 +10099,20 @@ snapshots:
       nanostores: 1.1.0
       zod: 4.3.5
 
-  '@better-auth/redis-storage@1.5.3(ioredis@5.9.1(supports-color@10.2.2))':
+  '@better-auth/core@1.5.3(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0)':
     dependencies:
+      '@better-auth/utils': 0.3.0
+      '@better-fetch/fetch': 1.1.21
+      '@standard-schema/spec': 1.1.0
+      better-call: 1.1.7(zod@4.3.5)
+      jose: 6.1.3
+      kysely: 0.28.10
+      nanostores: 1.1.0
+      zod: 4.6.5
+
+  '@better-auth/redis-storage@1.5.3(@better-auth/core@1.5.3(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))(ioredis@5.9.1(supports-color@10.2.2))':
+    dependencies:
+      '@better-auth/core': 1.5.3(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0)
       ioredis: 5.9.1(supports-color@10.2.2)
 
   '@better-auth/telemetry@1.4.13(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))':
@@ -10720,7 +10754,7 @@ snapshots:
       wrap-ansi: 7.0.0
       ws: 8.19.0
     optionalDependencies:
-      expo-router: 6.0.21(05b82a1aa0fc87c6050a3876edc728fd)
+      expo-router: 6.0.21(2194196665ff088e07b2fbcc29e1ff03)
       react-native: 0.83.1(@babel/core@7.28.6(supports-color@10.2.2))(@types/react@19.2.8)(react@19.2.3)(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
@@ -12395,7 +12429,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  '@react-native/babel-preset@0.81.5(supports-color@10.2.2)':
+  '@react-native/babel-preset@0.81.5(@babel/core@7.28.6(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
       '@babel/core': 7.28.6(supports-color@10.2.2)
       '@babel/plugin-proposal-export-default-from': 7.27.1(@babel/core@7.28.6(supports-color@10.2.2))
@@ -12455,7 +12489,7 @@ snapshots:
       nullthrows: 1.1.1
       yargs: 17.7.2
 
-  '@react-native/codegen@0.83.1(supports-color@10.2.2)':
+  '@react-native/codegen@0.83.1(@babel/core@7.28.6(supports-color@10.2.2))':
     dependencies:
       '@babel/core': 7.28.6(supports-color@10.2.2)
       '@babel/parser': 7.28.6
@@ -12464,8 +12498,6 @@ snapshots:
       invariant: 2.2.4
       nullthrows: 1.1.1
       yargs: 17.7.2
-    transitivePeerDependencies:
-      - supports-color
 
   '@react-native/community-cli-plugin@0.83.1(supports-color@10.2.2)':
     dependencies:
@@ -13740,7 +13772,7 @@ snapshots:
       '@babel/plugin-transform-runtime': 7.28.5(@babel/core@7.28.6(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/preset-react': 7.28.5(@babel/core@7.28.6(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/preset-typescript': 7.28.5(@babel/core@7.28.6(supports-color@10.2.2))(supports-color@10.2.2)
-      '@react-native/babel-preset': 0.81.5(supports-color@10.2.2)
+      '@react-native/babel-preset': 0.81.5(@babel/core@7.28.6(supports-color@10.2.2))(supports-color@10.2.2)
       babel-plugin-react-compiler: 1.0.0
       babel-plugin-react-native-web: 0.21.2
       babel-plugin-syntax-hermes-parser: 0.29.1
@@ -13810,7 +13842,7 @@ snapshots:
     dependencies:
       better-auth: 1.4.13(drizzle-kit@0.31.8(supports-color@10.2.2))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(postgres@3.4.8))(next@16.0.11(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@4.0.17(@types/node@25.2.1)(happy-dom@17.6.3)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
 
-  better-auth@1.4.13(drizzle-kit@0.31.8(supports-color@10.2.2))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(postgres@3.4.8))(next@16.0.11(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@3.2.4(@types/node@25.2.1)(happy-dom@17.6.3)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(supports-color@10.2.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3)):
+  better-auth@1.4.13(drizzle-kit@0.31.8(supports-color@10.2.2))(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.10)(postgres@3.4.8))(next@16.0.11(@babel/core@7.28.6(supports-color@10.2.2))(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@3.2.4(@types/node@25.2.1)(happy-dom@17.6.3)(jiti@2.6.1)(lightningcss@1.31.0)(sass-embedded@1.97.2)(sass@1.97.2)(supports-color@10.2.2)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3)):
     dependencies:
       '@better-auth/core': 1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0)
       '@better-auth/telemetry': 1.4.13(@better-auth/core@1.4.13(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.21)(better-call@1.1.7(zod@4.3.5))(jose@6.1.3)(kysely@0.28.10)(nanostores@1.1.0))
@@ -15038,7 +15070,7 @@ snapshots:
       react: 19.2.3
       react-native: 0.83.1(@babel/core@7.28.6(supports-color@10.2.2))(@types/react@19.2.8)(react@19.2.3)(supports-color@10.2.2)
 
-  expo-router@6.0.21(05b82a1aa0fc87c6050a3876edc728fd):
+  expo-router@6.0.21(2194196665ff088e07b2fbcc29e1ff03):
     dependencies:
       '@expo/metro-runtime': 6.1.2(expo@54.0.31)(react-dom@19.2.3(react@19.2.3))(react-native@0.83.1(@babel/core@7.28.6(supports-color@10.2.2))(@types/react@19.2.8)(react@19.2.3)(supports-color@10.2.2))(react@19.2.3)
       '@expo/schema-utils': 0.1.8
@@ -17628,7 +17660,7 @@ snapshots:
     dependencies:
       '@jest/create-cache-key-function': 29.7.0
       '@react-native/assets-registry': 0.83.1
-      '@react-native/codegen': 0.83.1(supports-color@10.2.2)
+      '@react-native/codegen': 0.83.1(@babel/core@7.28.6(supports-color@10.2.2))
       '@react-native/community-cli-plugin': 0.83.1(supports-color@10.2.2)
       '@react-native/gradle-plugin': 0.83.1
       '@react-native/js-polyfills': 0.83.1
@@ -19390,3 +19422,5 @@ snapshots:
       readable-stream: 4.7.0
 
   zod@4.3.5: {}
+
+  zod@4.6.5: {}
