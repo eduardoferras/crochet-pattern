@@ -33,7 +33,7 @@ COPY --chown=node:node --from=build /prod/backend/node_modules ./node_modules
 COPY --chown=node:node --from=build /home/node/app/apps/backend/dist ./dist
 COPY --chown=node:node --from=build /home/node/app/apps/backend/public ./public
 
-EXPOSE 3000
+EXPOSE 3002
 
 USER node
 
